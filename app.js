@@ -16,7 +16,7 @@ connection.connect(error => {
         console.error('Error connecting to database:', error);
         return;
     }
-    console.log('Successfully connected to the database MySQL');
+    console.log('!!!!!!Successfully connected to the database MySQL!!!!!!');
 });
 
 app.get('/', (request, response) => {
