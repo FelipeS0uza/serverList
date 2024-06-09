@@ -38,14 +38,14 @@ app.get("/liveness", (request, response) => {
     });
 });
 
-    app.get("/readiness", (request, response) => {
-        return response
-        .status(200)
-        .json({
-            message: "App READY",
-            path: process.cwd(), 
-            date: new Date().getTime()
-        });
+app.get("/readiness", (request, response) => {
+    return response
+    .status(200)
+    .json({
+        message: "App READY",
+        path: process.cwd(), 
+        date: new Date().getTime()
+    });
 });
 
 app.get('/consulta-dados', (request, response) => {
@@ -66,6 +66,5 @@ app.get('/consulta-dados', (request, response) => {
         });
     });
 });
-
 
 module.exports = app;
